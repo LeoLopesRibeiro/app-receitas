@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, StatusBar } from "react-native";
+import { receitas } from "./src/receitas";
+import Receita from "./src/components/Receita";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView>
+      <View style={styles.container}>
+        {receitas.sobremesa.map((receita, index) => {
+          return <Receita key={index} receita={receita} tipo="sobremesa" />;
+        })}
+
+        <StatusBar style="auto" />
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#FBFBFB",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
