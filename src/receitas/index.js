@@ -24,6 +24,7 @@ export const receitas = {
       id_video: "MkZ7lM7iaiE",
       tempo: "40 min",
       porcao: 4,
+      por: "Taize",
     },
     {
       nome: "Pão Caseiro Fácil",
@@ -69,6 +70,7 @@ export const receitas = {
       id_video: "nLjB7mz5JFE",
       tempo: "120 min",
       porcao: 2,
+      por: "Carlos Silva",
     },
     {
       nome: "Bolinho de Arroz",
@@ -91,6 +93,7 @@ export const receitas = {
       id_video: "IAWhCuprwko",
       tempo: "30 min",
       porcao: 30,
+      por: "Tania Cione",
     },
     {
       nome: "Salada Caesar",
@@ -121,6 +124,7 @@ export const receitas = {
       id_video: "3JxdhkpOrC0",
       tempo: "15 min",
       porcao: 4,
+      por: "Paula Freire",
     },
     {
       nome: "Cebola Empanada",
@@ -164,6 +168,7 @@ export const receitas = {
       id_video: "bg4xnXhuPlo",
       tempo: "120 min",
       porcao: 1,
+      por: "Tudo Gostoso",
     },
   ],
   principal: [
@@ -205,6 +210,7 @@ export const receitas = {
       id_video: "tZuDfGGBVl8",
       tempo: "90 min",
       porcao: 6,
+      por: "Juliana",
     },
     {
       nome: "Rocambole de Carne Moída",
@@ -227,6 +233,7 @@ export const receitas = {
       id_video: "NmICuanRLck",
       tempo: "15 min",
       porcao: 8,
+      por: "Luciere",
     },
     {
       nome: "Escondidinho de Carne Seca",
@@ -253,6 +260,7 @@ export const receitas = {
       id_video: "XNKtlKOCQLg",
       tempo: "60 min",
       porcao: 6,
+      por: "Juliana da Graça",
     },
     {
       nome: "Costelinha com Molho Barbecue (Outback)",
@@ -283,6 +291,7 @@ export const receitas = {
       id_video: "oCz9dAq3l2Q",
       tempo: "70 min",
       porcao: 5,
+      por: "Rodrigo Mendes",
     },
     {
       nome: "Yakisoba da Casa",
@@ -313,6 +322,7 @@ export const receitas = {
       id_video: "E3Kvegx7XeY",
       tempo: "40 min",
       porcao: 4,
+      por: "Tudo Gostoso",
     },
   ],
   sobremesa: [
@@ -339,6 +349,7 @@ export const receitas = {
       id_video: "T1YQicI16Fk",
       tempo: "35 min",
       porcao: 10,
+      por: "Laura",
     },
     {
       nome: "Danoninho Caseiro",
@@ -355,6 +366,7 @@ export const receitas = {
       id_video: "NA9_DLru0Bk",
       tempo: "10 min",
       porcao: 4,
+      por: "Cristiane Russell Seixas",
     },
     {
       nome: "Bolo de Sorvete",
@@ -391,6 +403,7 @@ export const receitas = {
       id_video: "MP0nq1FNk1c",
       tempo: "60 min",
       porcao: 10,
+      por: "Fernanda",
     },
     {
       nome: "Pave Simples de Chocolate",
@@ -421,6 +434,7 @@ export const receitas = {
       id_video: "1ngCIWqIxtI",
       tempo: "140 min",
       porcao: 8,
+      por: "Laíze Leopoldina",
     },
     {
       nome: "Mousse de Limão Rápido",
@@ -439,6 +453,7 @@ export const receitas = {
       id_video: "4ELOqMupksA",
       tempo: "10 min",
       porcao: 8,
+      por: "Dah Gabi",
     },
   ],
   vegano: [
@@ -459,6 +474,7 @@ export const receitas = {
       id_video: "EbmEtfd43ro",
       tempo: "6 min",
       porcao: 1,
+      por: "Natália Souza Brito",
     },
     {
       nome: "Tabule",
@@ -485,6 +501,7 @@ export const receitas = {
       id_video: "O3SW3EnMQZ0",
       tempo: "480 min",
       porcao: 4,
+      por: "Tudo Gostoso",
     },
     {
       nome: "Salada de Tomate Cereja com Queijo e Maçã",
@@ -505,6 +522,7 @@ export const receitas = {
       id_video: "VxawKK4ogb4",
       tempo: "20 min",
       porcao: 4,
+      por: "Gilberto Damas",
     },
     {
       nome: "Pão de Batata sem Glúten",
@@ -538,6 +556,7 @@ export const receitas = {
       id_video: "S2NUadlXNK0",
       tempo: "60 min",
       porcao: 2,
+      por: "Tudo Gostoso",
     },
     {
       nome: "Pão sem Glúten com Farinha de Arroz",
@@ -558,6 +577,7 @@ export const receitas = {
       id_video: "kjBwMLfkL8U",
       tempo: "40 min",
       porcao: 6,
+      por: "Sheyla Campos Cardoso",
     },
   ],
 };
