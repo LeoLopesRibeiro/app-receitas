@@ -1,5 +1,10 @@
+import { View } from "react-native";
 
+function Vegano() {
+  return(
+    <View>
 
-export default function Receita() {
-  
+    </View>
+  )
 }
+export default Vegano;

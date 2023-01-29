@@ -1,15 +1,18 @@
 import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 
-export default function Receita({ receita, tipo }) {
+export default function CardReceita({ receita, tipo, navigation }) {
   const tiposReceita = {
     entrada: "#FF4246",
     principal: "#FFB86E",
     sobremesa: "#F4CFE1",
     vegano: "#90EBBE",
   };
+  function goToReceita(receitas) {
+    navigation.navigate("Receita", {receitas: receitas});
+  }
 
   return (
-    <TouchableOpacity activeOpacity={0.9}>
+    <TouchableOpacity activeOpacity={0.9} onPress={()=> goToReceita(receita)}>
       <View style={style.shadowBox}>
         <View style={style.viewReceita}>
           <Image
