@@ -5,9 +5,9 @@ function Entrada({ navigation }) {
     return (
         <ScrollView>
             <View style={style.container}>
-                {/* {receitas.entrada.map((receita, index) =>{
+                {receitas.entrada.map((receita, index) =>{
                     return <CardReceita navigation={navigation}  key={index} receita={receita} tipo="entrada" />
-                })} */}
+                })}
             </View>
         </ScrollView>
 
