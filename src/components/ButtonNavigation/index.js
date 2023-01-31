@@ -23,7 +23,7 @@ function ButtonNavigation(props) {
   return (
     <TouchableOpacity
       onPress={onPress}
-      style={{ ...styles.button, width: focused ? 90 : "17%" }}
+      style={{ ...styles.button, width: focused ? 100 : "16%" }}
     >
       <Animatable.View
         style={{
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#FFF",
+    fontWeight: "500"
   },
 });
 export default ButtonNavigation;

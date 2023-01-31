@@ -1,10 +1,17 @@
-import { ScrollView, StyleSheet, Text, View, StatusBar } from "react-native";
+import { StyleSheet, StatusBar } from "react-native";
 import MyStack from "./src/Routes/stack.routes";
 
 export default function App() {
- return(
-  <MyStack/>
- )
+  return (
+    <>
+      <MyStack />
+      <StatusBar
+        style="auto"
+        barStyle="dark-content"
+        backgroundColor="#FBFBFB"
+      />
+    </>
+  );
 }
 
 const styles = StyleSheet.create({

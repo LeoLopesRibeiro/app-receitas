@@ -25,7 +25,8 @@ export const receitas = {
       tempo: "40 min",
       porcao: 4,
       por: "Taize",
-      img: 'batata'
+      img: "batata",
+      tipo: "entrada",
     },
     {
       nome: "Pão Caseiro Fácil",
@@ -72,7 +73,8 @@ export const receitas = {
       tempo: "120 min",
       porcao: 2,
       por: "Carlos Silva",
-      img: 'pao'
+      img: "pao",
+      tipo: "entrada",
     },
     {
       nome: "Bolinho de Arroz",
@@ -96,7 +98,8 @@ export const receitas = {
       tempo: "30 min",
       porcao: 30,
       por: "Tania Cione",
-      img: 'bolinho'
+      img: "bolinho",
+      tipo: "entrada",
     },
     {
       nome: "Salada Caesar",
@@ -128,7 +131,8 @@ export const receitas = {
       tempo: "15 min",
       porcao: 4,
       por: "Paula Freire",
-      img: 'salada'
+      img: "salada",
+      tipo: "entrada",
     },
     {
       nome: "Cebola Empanada",
@@ -173,7 +177,8 @@ export const receitas = {
       tempo: "120 min",
       porcao: 1,
       por: "Tudo Gostoso",
-      img: 'cebola'
+      img: "cebola",
+      tipo: "entrada",
     },
   ],
   principal: [
@@ -216,7 +221,8 @@ export const receitas = {
       tempo: "90 min",
       porcao: 6,
       por: "Juliana",
-      img: 'bifeParmegiana'
+      img: "bifeParmegiana",
+      tipo: "principal",
     },
     {
       nome: "Rocambole de Carne Moída",
@@ -240,7 +246,8 @@ export const receitas = {
       tempo: "15 min",
       porcao: 8,
       por: "Luciere",
-      img: 'rocambole'
+      img: "rocambole",
+      tipo: "principal",
     },
     {
       nome: "Escondidinho de Carne Seca",
@@ -268,7 +275,8 @@ export const receitas = {
       tempo: "60 min",
       porcao: 6,
       por: "Juliana da Graça",
-      img: 'escondidinho'
+      img: "escondidinho",
+      tipo: "principal",
     },
     {
       nome: "Costelinha com Molho Barbecue (Outback)",
@@ -300,7 +308,8 @@ export const receitas = {
       tempo: "70 min",
       porcao: 5,
       por: "Rodrigo Mendes",
-      img: 'costelinha'
+      img: "costelinha",
+      tipo: "principal",
     },
     {
       nome: "Yakisoba da Casa",
@@ -332,7 +341,8 @@ export const receitas = {
       tempo: "40 min",
       porcao: 4,
       por: "Tudo Gostoso",
-      img: 'yakissoba'
+      img: "yakissoba",
+      tipo: "principal",
     },
   ],
   sobremesa: [
@@ -360,7 +370,8 @@ export const receitas = {
       tempo: "35 min",
       porcao: 10,
       por: "Laura",
-      img: 'bombomTravessa'
+      img: "bombomTravessa",
+      tipo: "sobremesa",
     },
     {
       nome: "Danoninho Caseiro",
@@ -378,7 +389,8 @@ export const receitas = {
       tempo: "10 min",
       porcao: 4,
       por: "Cristiane Russell Seixas",
-      img: 'danoninhoCaseiro'
+      img: "danoninhoCaseiro",
+      tipo: "sobremesa",
     },
     {
       nome: "Bolo de Sorvete",
@@ -416,7 +428,8 @@ export const receitas = {
       tempo: "60 min",
       porcao: 10,
       por: "Fernanda",
-      img: 'boloSorvete'
+      img: "boloSorvete",
+      tipo: "sobremesa",
     },
     {
       nome: "Pave Simples de Chocolate",
@@ -448,7 +461,8 @@ export const receitas = {
       tempo: "140 min",
       porcao: 8,
       por: "Laíze Leopoldina",
-      img: 'paveChocolate'
+      img: "paveChocolate",
+      tipo: "sobremesa",
     },
     {
       nome: "Mousse de Limão Rápido",
@@ -468,7 +482,8 @@ export const receitas = {
       tempo: "10 min",
       porcao: 8,
       por: "Dah Gabi",
-      img: 'mousseLimao'
+      img: "mousseLimao",
+      tipo: "sobremesa",
     },
   ],
   vegano: [
@@ -490,7 +505,8 @@ export const receitas = {
       tempo: "6 min",
       porcao: 1,
       por: "Natália Souza Brito",
-      img: 'crepioca'
+      img: "crepioca",
+      tipo: "vegano",
     },
     {
       nome: "Tabule",
@@ -518,7 +534,8 @@ export const receitas = {
       tempo: "480 min",
       porcao: 4,
       por: "Tudo Gostoso",
-      img: 'tabule'
+      img: "tabule",
+      tipo: "vegano",
     },
     {
       nome: "Salada de Tomate Cereja com Queijo e Maçã",
@@ -540,7 +557,8 @@ export const receitas = {
       tempo: "20 min",
       porcao: 4,
       por: "Gilberto Damas",
-      img: 'saladaTomate'
+      img: "saladaTomate",
+      tipo: "vegano",
     },
     {
       nome: "Pão de Batata sem Glúten",
@@ -575,7 +593,8 @@ export const receitas = {
       tempo: "60 min",
       porcao: 2,
       por: "Tudo Gostoso",
-      img: 'paoBatata'
+      img: "paoBatata",
+      tipo: "vegano",
     },
     {
       nome: "Pão sem Glúten com Farinha de Arroz",
@@ -597,7 +616,8 @@ export const receitas = {
       tempo: "40 min",
       porcao: 6,
       por: "Sheyla Campos Cardoso",
-      img: 'paoSemGluten'
+      img: "paoSemGluten",
+      tipo: "vegano",
     },
   ],
 };
