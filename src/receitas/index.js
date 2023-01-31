@@ -25,6 +25,7 @@ export const receitas = {
       tempo: "40 min",
       porcao: 4,
       por: "Taize",
+      img: '././assets/batataFrita.jpg'
     },
     {
       nome: "Pão Caseiro Fácil",
@@ -71,6 +72,7 @@ export const receitas = {
       tempo: "120 min",
       porcao: 2,
       por: "Carlos Silva",
+      img: '././assets/paoCaseiro.jpg'
     },
     {
       nome: "Bolinho de Arroz",
@@ -94,6 +96,7 @@ export const receitas = {
       tempo: "30 min",
       porcao: 30,
       por: "Tania Cione",
+      img: '././assets/bolinhoArroz.png'
     },
     {
       nome: "Salada Caesar",
@@ -125,6 +128,7 @@ export const receitas = {
       tempo: "15 min",
       porcao: 4,
       por: "Paula Freire",
+      img: '././assets/saladaCaesar.png'
     },
     {
       nome: "Cebola Empanada",
@@ -169,6 +173,7 @@ export const receitas = {
       tempo: "120 min",
       porcao: 1,
       por: "Tudo Gostoso",
+      img: '././assets/cebolaEmpanada.jpg'
     },
   ],
   principal: [
@@ -211,6 +216,7 @@ export const receitas = {
       tempo: "90 min",
       porcao: 6,
       por: "Juliana",
+      img: '././assets/bifeParmegiana.png'
     },
     {
       nome: "Rocambole de Carne Moída",
@@ -234,6 +240,7 @@ export const receitas = {
       tempo: "15 min",
       porcao: 8,
       por: "Luciere",
+      img: '././assets/rocambole.jpg'
     },
     {
       nome: "Escondidinho de Carne Seca",
@@ -261,6 +268,7 @@ export const receitas = {
       tempo: "60 min",
       porcao: 6,
       por: "Juliana da Graça",
+      img: '././assets/escondidinhoCarneSeca.jpg'
     },
     {
       nome: "Costelinha com Molho Barbecue (Outback)",
@@ -292,6 +300,7 @@ export const receitas = {
       tempo: "70 min",
       porcao: 5,
       por: "Rodrigo Mendes",
+      img: '././assets/costelinha.png'
     },
     {
       nome: "Yakisoba da Casa",
@@ -323,6 +332,7 @@ export const receitas = {
       tempo: "40 min",
       porcao: 4,
       por: "Tudo Gostoso",
+      img: '././assets/yakissoba.jpg'
     },
   ],
   sobremesa: [
@@ -350,6 +360,7 @@ export const receitas = {
       tempo: "35 min",
       porcao: 10,
       por: "Laura",
+      img: '././assets/bombomTravessa.jpg'
     },
     {
       nome: "Danoninho Caseiro",
@@ -367,6 +378,7 @@ export const receitas = {
       tempo: "10 min",
       porcao: 4,
       por: "Cristiane Russell Seixas",
+      img: '././assets/danoninhoCaseiro.jpg'
     },
     {
       nome: "Bolo de Sorvete",
@@ -404,6 +416,7 @@ export const receitas = {
       tempo: "60 min",
       porcao: 10,
       por: "Fernanda",
+      img: '././assets/boloSorvete.jpg'
     },
     {
       nome: "Pave Simples de Chocolate",
@@ -435,6 +448,7 @@ export const receitas = {
       tempo: "140 min",
       porcao: 8,
       por: "Laíze Leopoldina",
+      img: '././assets/paveChocolate.png'
     },
     {
       nome: "Mousse de Limão Rápido",
@@ -454,6 +468,7 @@ export const receitas = {
       tempo: "10 min",
       porcao: 8,
       por: "Dah Gabi",
+      img: '././assets/mousseLimao.png'
     },
   ],
   vegano: [
@@ -475,6 +490,7 @@ export const receitas = {
       tempo: "6 min",
       porcao: 1,
       por: "Natália Souza Brito",
+      img: '././assets/crepioca.png'
     },
     {
       nome: "Tabule",
@@ -502,6 +518,7 @@ export const receitas = {
       tempo: "480 min",
       porcao: 4,
       por: "Tudo Gostoso",
+      img: '././assets/tabule.png'
     },
     {
       nome: "Salada de Tomate Cereja com Queijo e Maçã",
@@ -523,6 +540,7 @@ export const receitas = {
       tempo: "20 min",
       porcao: 4,
       por: "Gilberto Damas",
+      img: '././assets/saladaTomate.jpg'
     },
     {
       nome: "Pão de Batata sem Glúten",
@@ -557,6 +575,7 @@ export const receitas = {
       tempo: "60 min",
       porcao: 2,
       por: "Tudo Gostoso",
+      img: '././assets/paoBatata.jpg'
     },
     {
       nome: "Pão sem Glúten com Farinha de Arroz",
@@ -578,6 +597,7 @@ export const receitas = {
       tempo: "40 min",
       porcao: 6,
       por: "Sheyla Campos Cardoso",
+      img: '././assets/paoSemGluten.jpg'
     },
   ],
 };
