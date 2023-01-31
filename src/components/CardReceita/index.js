@@ -1,5 +1,29 @@
 import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 
+receitaImage = {
+  batata: require("../../../assets/batataFrita.jpg"),
+  pao: require("../../../assets/paoCaseiro.jpg"),
+  bolinho: require("../../../assets/bolinhoArroz.jpg"),
+  salada: require("../../../assets/saladaCaesar.jpg"),
+  cebola: require("../../../assets/cebolaEmpanada.jpg"),
+  bifeParmegiana: require("../../../assets/bifeParmegiana.png"),
+  rocambole: require("../../../assets/rocambole.jpg"),
+  escondidinho: require("../../../assets/escondidinhoCarneSeca.jpg"), 
+  costelinha: require("../../../assets/costelinha.png"), 
+  yakissoba: require("../../../assets/yakissoba.jpg"), 
+  bombomTravessa: require("../../../assets/bombomTravessa.jpg"), 
+  danoninhoCaseiro: require("../../../assets/danoninhoCaseiro.jpg"), 
+  boloSorvete: require("../../../assets/boloSorvete.png"), 
+  paveChocolate: require("../../../assets/paveChocolate.png"), 
+  mousseLimao: require("../../../assets/mousseLimao.jpg"), 
+  crepioca: require("../../../assets/crepioca.jpg"), 
+  tabule: require("../../../assets/tabule.png"), 
+  saladaTomate: require("../../../assets/saladaTomate.jpg"), 
+  paoBatata: require("../../../assets/paoBatata.jpg"), 
+  paoSemGluten: require("../../../assets/paoSemGluten.jpg"), 
+}
+
+
 export default function CardReceita({ receita, tipo, navigation }) {
   const tiposReceita = {
     entrada: "#FF4246",
@@ -17,7 +41,7 @@ export default function CardReceita({ receita, tipo, navigation }) {
         <View style={style.viewReceita}>
           <Image
             style={style.imageReceita}
-            source={require("../../../assets/cafe.jpeg")}
+            source={receitaImage[receita.img]}
           />
           <View style={style.informacao}>
             <View

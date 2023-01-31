@@ -7,8 +7,8 @@ function Home({navigation}) {
     return (
         <ScrollView>
             <View style={style.container}>
-                {receitas.sobremesa.map((receita, index) => {
-                    return <CardReceita navigation={navigation} key={index} receita={receita} tipo="sobremesa" />;
+                {receitas.vegano.map((receita, index) => {
+                    return <CardReceita navigation={navigation} key={index} receita={receita} tipo="vegano" />;
                 })}
 
                 <StatusBar style="auto" />
