@@ -10,8 +10,6 @@ function Home({ navigation }) {
   const [pageAnimation, setPageAnimation] = useState(null);
   const scrollRef = useRef();
 
-  console.log(scrollRef.current);
-
   useEffect(() => {
     function gerarReceitasRandom() {
       let randomsReceitas = [];

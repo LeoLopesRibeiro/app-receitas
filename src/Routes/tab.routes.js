@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../pages/Home";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
-import Principal from "../pages/Princpal/index";
+import Principal from "../pages/Principal/index";
 import Entrada from "../pages/Entrada";
 import Sobremesa from "../pages/Sobremesa";
 import ButtonNavigation from "../components/ButtonNavigation";

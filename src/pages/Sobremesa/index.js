@@ -1,11 +1,31 @@
+import { useEffect, useState, useRef } from "react";
 import { ScrollView, View, StyleSheet, Text } from "react-native";
 import CardReceita from "../../components/CardReceita";
 import { receitas } from "../../receitas";
+import * as Animatable from "react-native-animatable";
 
 function Sobremesa({ navigation }) {
+  const [pageAnimation, setPageAnimation] = useState(null);
+  const scrollRef = useRef();
+
+  useEffect(() => {
+    navigation.addListener("focus", (e) => {
+      setPageAnimation("bounceInUp");
+      scrollRef.current.scrollTo({ y: 0, animated: true });
+    });
+
+    navigation.addListener("blur", (e) => {
+      setPageAnimation(null);
+    });
+  }, [navigation]);
+
   return (
-    <ScrollView>
-      <View style={style.container}>
+    <ScrollView ref={scrollRef}>
+      <Animatable.View
+        style={style.container}
+        animation={pageAnimation}
+        duration={400}
+      >
         <Text style={style.titulo}>Receitas</Text>
         <View style={style.receitas}>
           {receitas.sobremesa.map((receita, index) => {
@@ -19,7 +39,7 @@ function Sobremesa({ navigation }) {
             );
           })}
         </View>
-      </View>
+      </Animatable.View>
     </ScrollView>
   );
 }
