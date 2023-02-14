@@ -6,10 +6,6 @@ import * as Animatable from "react-native-animatable";
 import { useFonts, Poppins_400Regular } from "@expo-google-fonts/poppins";
 
 function Home({ navigation }) {
-  useFonts({
-    Poppins_400Regular,
-  });
-
   const tipoReceitas = ["entrada", "principal", "sobremesa", "vegano"];
   const [receitasRandom, setReceitasRandom] = useState([]);
   const [pageAnimation, setPageAnimation] = useState(null);
@@ -52,13 +48,25 @@ function Home({ navigation }) {
     navigation.addListener("focus", (e) => {
       setPageAnimation("bounceInUp");
       gerarReceitasRandom();
-      scrollRef.current.scrollTo({ y: 0, animated: true });
+
+      if (scrollRef.current) {
+        scrollRef.current.scrollTo({ y: 0, animated: true });
+      }
+
     });
 
     navigation.addListener("blur", (e) => {
       setPageAnimation(null);
     });
   }, [navigation]);
+
+  let [fontsLoaded] = useFonts({
+    Poppins_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
 
   return (
     <ScrollView ref={scrollRef}>

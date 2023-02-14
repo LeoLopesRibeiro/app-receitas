@@ -11,20 +11,26 @@ function ButtonNavigation(props) {
   const refViewText = useRef(null);
 
   useEffect(() => {
-    if (focused) {
-      refView.current.animate({ 0: { scale: 0 }, 1: { scale: 1 } });
-      refViewText.current.animate({ 0: { scale: 0 }, 1: { scale: 1 } });
-    } else {
-      refView.current.animate({ 0: { scale: 1 }, 1: { scale: 1 } });
-      refViewText.current.animate({ 0: { scale: 1 }, 1: { scale: 1 } });
+    if (refView.current && refViewText.current) {
+      if (focused) {
+        refView.current.animate({ 0: { scale: 0 }, 1: { scale: 1 } });
+        refViewText.current.animate({ 0: { scale: 0 }, 1: { scale: 1 } });
+      } else {
+        refView.current.animate({ 0: { scale: 1 }, 1: { scale: 1 } });
+        refViewText.current.animate({ 0: { scale: 1 }, 1: { scale: 1 } });
+      }
     }
- 
+
   }, [focused]);
 
-      
   let [fontsLoaded] = useFonts({
     Poppins_600SemiBold,
-   });
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -49,7 +55,7 @@ function ButtonNavigation(props) {
 const styles = StyleSheet.create({
   button: {
     height: "100%",
-    
+
     alignItems: "center",
     justifyContent: "center",
   },
@@ -63,8 +69,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#FFF",
-    fontFamily: "Poppins_600SemiBold"
-
+    fontFamily: "Poppins_600SemiBold",
   },
 });
 export default ButtonNavigation;
