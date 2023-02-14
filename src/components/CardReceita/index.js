@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
-
+import { useFonts, Poppins_600SemiBold, Poppins_400Regular } from "@expo-google-fonts/poppins";
 receitaImage = {
   batata: require("../../../assets/batataFrita.jpg"),
   pao: require("../../../assets/paoCaseiro.jpg"),
@@ -34,6 +34,15 @@ export default function CardReceita({ receita, tipo, navigation }) {
     navigation.navigate("Receita", { receitas: receitas });
   }
 
+  let [fontsLoaded] = useFonts({
+    Poppins_400Regular,
+    Poppins_600SemiBold
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <TouchableOpacity activeOpacity={0.9} onPress={() => goToReceita(receita)}>
       <View style={style.viewReceita}>
@@ -60,7 +69,7 @@ export default function CardReceita({ receita, tipo, navigation }) {
                 style={style.imagemTempo}
                 source={require("../../../assets/relogio.png")}
               />
-              <Text>{receita.tempo}</Text>
+              <Text style={style.textoPorcaoTempo}>{receita.tempo}</Text>
             </View>
           </View>
         </View>
@@ -98,12 +107,14 @@ const style = StyleSheet.create({
     width: "60%",
     fontSize: 16,
     fontWeight: "600",
+    fontFamily: "Poppins_600SemiBold"
   },
   tipoReceita: {
     fontSize: 18,
     fontWeight: "600",
     textTransform: "uppercase",
     color: "#FFF",
+    fontFamily: "Poppins_600SemiBold"
   },
   porcaoTempo: {
     flexDirection: "row",
@@ -127,4 +138,7 @@ const style = StyleSheet.create({
     width: 40,
     height: 40,
   },
+  textoPorcaoTempo: {
+    fontFamily: "Poppins_400Regular"
+  }
 });

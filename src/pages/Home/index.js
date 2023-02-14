@@ -3,8 +3,13 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CardReceita from "../../components/CardReceita";
 import { receitas } from "../../receitas";
 import * as Animatable from "react-native-animatable";
+import { useFonts, Poppins_400Regular } from "@expo-google-fonts/poppins";
 
 function Home({ navigation }) {
+  useFonts({
+    Poppins_400Regular,
+  });
+
   const tipoReceitas = ["entrada", "principal", "sobremesa", "vegano"];
   const [receitasRandom, setReceitasRandom] = useState([]);
   const [pageAnimation, setPageAnimation] = useState(null);
@@ -89,6 +94,7 @@ const style = StyleSheet.create({
   titulo: {
     width: 350,
     fontSize: 38,
+    fontFamily: "Poppins_400Regular"
   },
   receitas: {
     display: "flex",

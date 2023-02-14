@@ -4,9 +4,14 @@ import CardReceita from "../../components/CardReceita";
 import { receitas } from "../../receitas";
 import * as Animatable from "react-native-animatable";
 
+import { useFonts, Poppins_400Regular } from "@expo-google-fonts/poppins";
+
 function Entrada({ navigation }) {
   const [pageAnimation, setPageAnimation] = useState(null);
   const scrollRef = useRef();
+  let [fontsLoaded] = useFonts({
+    Poppins_400Regular,
+  });
 
   useEffect(() => {
     navigation.addListener("focus", (e) => {
@@ -17,7 +22,11 @@ function Entrada({ navigation }) {
     navigation.addListener("blur", (e) => {
       setPageAnimation(null);
     });
+    
   }, [navigation]);
+
+  
+  
 
   return (
     <ScrollView ref={scrollRef}>
@@ -54,6 +63,7 @@ const style = StyleSheet.create({
   titulo: {
     width: 350,
     fontSize: 38,
+    fontFamily: "Poppins_400Regular"
   },
   receitas: {
     display: "flex",
