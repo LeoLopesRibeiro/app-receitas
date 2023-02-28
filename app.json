@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "app-receitas",
-    "slug": "app-receitas",
+    "name": "ReceiTech",
+    "slug": "receitech",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f25044"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,11 +23,18 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#f25044"
+      },
+      "package": "com.techninja.receitech"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a880c6cf-21b3-4129-9faf-519fe26a2752"
+      }
+    },
+    "owner": "tech-ninja"
   }
 }
