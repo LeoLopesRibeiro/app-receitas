@@ -10,17 +10,8 @@ const { Screen, Navigator } = createNativeStackNavigator();
 function MyStack() {
   return (
     <NavigationContainer>
-      <Navigator>
-        <Screen
-          name="Receitas"
-          component={TabNavigator}
-          options={{
-            headerShown: false,
-            // headerTitle: () => <Header />,
-            // headerTintColor: "#fff",
-          }}
-        />
-
+      <Navigator screenOptions={{ headerShown: false }}>
+        <Screen name="Receitas" component={TabNavigator} />
         <Screen name="Receita" component={Receita} />
       </Navigator>
     </NavigationContainer>

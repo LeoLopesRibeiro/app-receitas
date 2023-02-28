@@ -1,6 +1,13 @@
-import { View, Text, Image, ScrollView, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 import { useRef } from "react";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons, AntDesign } from "@expo/vector-icons";
 import YoutubePlayer from "react-native-youtube-iframe";
 import {
   useFonts,
@@ -32,7 +39,7 @@ receitaImage = {
   paoSemGluten: require("../../../assets/paoSemGluten.jpg"),
 };
 
-export default function Receita({ route }) {
+export default function Receita({ route, navigation }) {
   const { receitas } = route.params;
   const playerRef = useRef();
   const tiposReceita = {
@@ -47,92 +54,105 @@ export default function Receita({ route }) {
     Poppins_700Bold,
   });
 
-  if(!fontsLoaded){
-    return null
+  if (!fontsLoaded) {
+    return null;
   }
 
   return (
     <ScrollView>
-      <View style={style.containerImage}>
-        <Image style={style.img} source={receitaImage[receitas.img]} />
-      </View>
-
-      <View style={style.containerTitulo}>
-        <Text style={style.receitasTitulo}>{receitas.nome}</Text>
-        <Text style={{fontFamily: "Poppins_400Regular"}}>Por {receitas.por}</Text>
-      </View>
-
-      <View style={style.containerNomeTipo}>
-        <View
-          style={[
-            style.nomeTipo,
-            { backgroundColor: tiposReceita[receitas.tipo] },
-          ]}
-        >
-          <Text style={style.nomeIngredientes}>Ingredientes</Text>
+      <View style={style.container}>
+        <View style={style.containerImage}>
+          <Image style={style.img} source={receitaImage[receitas.img]} />
         </View>
-        <View style={style.containerIngredientes}>
-          {receitas.ingredientes.map((ingredientes, index) => {
-            return (
-              <View style={style.containerTextoIngredientes}>
-                <Text style={style.textoIngredientes} key={index}>
-                  <MaterialCommunityIcons
-                    name="circle"
-                    size={10}
-                    color="#909090"
-                  />{" "}
-                  {ingredientes}
-                </Text>
-              </View>
-            );
-          })}
-        </View>
-      </View>
 
-      <View>
-        <View
-          style={[
-            style.nomeTipo,
-            { backgroundColor: tiposReceita[receitas.tipo] },
-          ]}
-        >
-          <Text style={style.nomeIngredientes}>Modo de Preparo</Text>
+        <View style={style.buttonBack}>
+          <TouchableOpacity onPress={navigation.goBack}>
+            <AntDesign name="left" size={40} color="black" />
+          </TouchableOpacity>
         </View>
-        <View style={style.containerModoPreparo}>
-          {receitas.modo_preparo.map((preparo, index) => {
-            return (
-              <View style={style.containertextoModoPreparo}>
-                <Text style={style.textoModoPreparo}>
-                  <Text style={{ fontWeight: "bold" }}>{index + 1}</Text>.{" "}
-                  {preparo}
-                </Text>
-              </View>
-            );
-          })}
-        </View>
-      </View>
 
-      <View style={style.video}>
-        <YoutubePlayer
-          ref={playerRef}
-          height={"80%"}
-          width={"90%"}
-          videoId={receitas.id_video}
-          webViewStyle={{ opacity: 0.99 }}
-        />
+        <View style={style.containerTitulo}>
+          <Text style={style.receitasTitulo}>{receitas.nome}</Text>
+          <Text style={{ fontFamily: "Poppins_400Regular" }}>
+            Por {receitas.por}
+          </Text>
+        </View>
+        <View style={style.containerNomeTipo}>
+          <View
+            style={[
+              style.nomeTipo,
+              { backgroundColor: tiposReceita[receitas.tipo] },
+            ]}
+          >
+            <Text style={style.nomeIngredientes}>Ingredientes</Text>
+          </View>
+          <View style={style.containerIngredientes}>
+            {receitas.ingredientes.map((ingredientes, index) => {
+              return (
+                <View key={index} style={style.containerTextoIngredientes}>
+                  <Text style={style.textoIngredientes}>
+                    <MaterialCommunityIcons
+                      name="circle"
+                      size={10}
+                      color="#909090"
+                    />
+                    {"  " + ingredientes}
+                  </Text>
+                </View>
+              );
+            })}
+          </View>
+        </View>
+        <View>
+          <View
+            style={[
+              style.nomeTipo,
+              { backgroundColor: tiposReceita[receitas.tipo] },
+            ]}
+          >
+            <Text style={style.nomeIngredientes}>Modo de Preparo</Text>
+          </View>
+          <View style={style.containerModoPreparo}>
+            {receitas.modo_preparo.map((preparo, index) => {
+              return (
+                <View key={index} style={style.containertextoModoPreparo}>
+                  <Text style={style.textoModoPreparo}>
+                    <Text style={{ fontWeight: "bold", fontSize: 20 }}>
+                      {index + 1}.
+                    </Text>
+                    {"  " + preparo}
+                  </Text>
+                </View>
+              );
+            })}
+          </View>
+        </View>
+        <View style={style.video}>
+          <YoutubePlayer
+            ref={playerRef}
+            height={"80%"}
+            width={"90%"}
+            videoId={receitas.id_video}
+            webViewStyle={{ opacity: 0.99 }}
+          />
+        </View>
       </View>
     </ScrollView>
   );
 }
 
 const style = StyleSheet.create({
+  container: {
+    flex: 1,
+    position: "relative",
+  },
   containerImage: {
     width: "100%",
   },
 
   img: {
     width: "100%",
-    height: 210,
+    height: 250,
   },
 
   containerTitulo: {
@@ -149,7 +169,7 @@ const style = StyleSheet.create({
 
   containerNomeTipo: {
     marginTop: 15,
-    marginBottom: 30,
+    marginBottom: 10,
     width: "100%",
   },
 
@@ -159,7 +179,7 @@ const style = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "center",
     paddingLeft: 10,
-    padding: 5
+    padding: 5,
   },
 
   nomeIngredientes: {
@@ -172,7 +192,7 @@ const style = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     padding: 10,
-    marginTop: 10
+    marginTop: 10,
   },
 
   textoIngredientes: {
@@ -182,6 +202,7 @@ const style = StyleSheet.create({
   containerTextoIngredientes: {
     display: "flex",
     alignItems: "flex-start",
+    flexDirection: "row",
     padding: 5,
   },
 
@@ -194,12 +215,12 @@ const style = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     padding: 10,
-    marginTop: 10
+    marginTop: 10,
   },
 
   containertextoModoPreparo: {
     display: "flex",
-    alignItems: "flex-start",
+    flexDirection: "row",
     padding: 5,
   },
 
@@ -215,6 +236,10 @@ const style = StyleSheet.create({
     height: 250,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 25,
+  },
+  buttonBack: {
+    position: "absolute",
+    top: 10,
+    left: 5
   },
 });
