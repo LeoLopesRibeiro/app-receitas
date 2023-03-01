@@ -2,14 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CardReceita from "../../components/CardReceita";
 import { receitas } from "../../receitas";
-import * as Animatable from "react-native-animatable";
-import { useFonts, Poppins_400Regular } from "@expo-google-fonts/poppins";
 
 function Home({ navigation }) {
   const tipoReceitas = ["entrada", "principal", "sobremesa", "vegano"];
   const [receitasRandom, setReceitasRandom] = useState([]);
-  const [pageAnimation, setPageAnimation] = useState(null);
-  const scrollRef = useRef();
 
   useEffect(() => {
     function gerarReceitasRandom() {
@@ -41,39 +37,18 @@ function Home({ navigation }) {
           break;
         }
       }
-
+      
       setReceitasRandom(randomsReceitas);
     }
-
-    navigation.addListener("focus", (e) => {
-      setPageAnimation("bounceInUp");
-      gerarReceitasRandom();
-
-      if (scrollRef.current) {
-        scrollRef.current.scrollTo({ y: 0, animated: true });
-      }
-
-    });
-
-    navigation.addListener("blur", (e) => {
-      setPageAnimation(null);
-    });
+    
+    gerarReceitasRandom()
   }, [navigation]);
 
-  let [fontsLoaded] = useFonts({
-    Poppins_400Regular,
-  });
-
-  if (!fontsLoaded) {
-    return null;
-  }
 
   return (
-    <ScrollView ref={scrollRef}>
-      <Animatable.View
+    <ScrollView>
+      <View
         style={style.container}
-        animation={pageAnimation}
-        duration={400}
       >
         <Text style={style.titulo}>Receitas</Text>
         <View style={style.receitas}>
@@ -88,7 +63,7 @@ function Home({ navigation }) {
             );
           })}
         </View>
-      </Animatable.View>
+      </View>
     </ScrollView>
   );
 }
@@ -102,7 +77,6 @@ const style = StyleSheet.create({
   titulo: {
     width: 350,
     fontSize: 38,
-    fontFamily: "Poppins_400Regular"
   },
   receitas: {
     display: "flex",

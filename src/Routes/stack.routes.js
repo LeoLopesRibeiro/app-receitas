@@ -11,7 +11,7 @@ function MyStack() {
   return (
     <NavigationContainer>
       <Navigator screenOptions={{ headerShown: false }}>
-        <Screen name="Receitas" component={TabNavigator} />
+        {/* <Screen name="Receitas" component={TabNavigator} /> */}
         <Screen name="Receita" component={Receita} />
       </Navigator>
     </NavigationContainer>

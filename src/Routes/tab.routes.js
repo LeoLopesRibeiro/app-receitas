@@ -28,7 +28,7 @@ function TabNavigator() {
         ],
       }}
     >
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Home"
         component={Home}
         options={{
@@ -45,7 +45,7 @@ function TabNavigator() {
             );
           },
         }}
-      />
+      /> */}
       <Tab.Screen
         name="Entrada"
         component={Entrada}

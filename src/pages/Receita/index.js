@@ -9,11 +9,6 @@ import {
 import { useRef } from "react";
 import { MaterialCommunityIcons, AntDesign } from "@expo/vector-icons";
 import YoutubePlayer from "react-native-youtube-iframe";
-import {
-  useFonts,
-  Poppins_400Regular,
-  Poppins_700Bold,
-} from "@expo-google-fonts/poppins";
 import { receitas } from "../../receitas";
 
 receitaImage = {
@@ -48,16 +43,6 @@ export default function Receita({ route, navigation }) {
     sobremesa: "#F4CFE1",
     vegano: "#90EBBE",
   };
-
-  let [fontsLoaded] = useFonts({
-    Poppins_400Regular,
-    Poppins_700Bold,
-  });
-
-  if (!fontsLoaded) {
-    return null;
-  }
-
   return (
     <ScrollView>
       <View style={style.container}>
@@ -164,7 +149,6 @@ const style = StyleSheet.create({
 
   receitasTitulo: {
     fontSize: 25,
-    fontFamily: "Poppins_700Bold",
   },
 
   containerNomeTipo: {
@@ -185,7 +169,6 @@ const style = StyleSheet.create({
   nomeIngredientes: {
     fontSize: 24,
     color: "#ffff",
-    fontFamily: "Poppins_700Bold",
   },
 
   containerIngredientes: {
@@ -208,7 +191,6 @@ const style = StyleSheet.create({
 
   textoIngredientes: {
     fontSize: 16,
-    fontFamily: "Poppins_400Regular",
   },
 
   containerModoPreparo: {
@@ -226,7 +208,6 @@ const style = StyleSheet.create({
 
   textoModoPreparo: {
     fontSize: 16,
-    fontFamily: "Poppins_400Regular",
   },
 
   video: {
